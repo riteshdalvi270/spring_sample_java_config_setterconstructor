@@ -10,6 +10,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     CustomerHibernate customerHibernate;
 
+    public CustomerServiceImpl(final CustomerHibernate customerHibernate) {
+        this.customerHibernate = customerHibernate;
+    }
     public void setCustomerHibernate(final CustomerHibernate customerHibernate) {
         this.customerHibernate = customerHibernate;
     }

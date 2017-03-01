@@ -13,8 +13,8 @@ public class AppConfig {
 
     @Bean(name = "customerService")
     public CustomerService getCustomerService() {
-        final CustomerServiceImpl customerService = new CustomerServiceImpl();
-        customerService.setCustomerHibernate(getCustomerHibernate());
+        final CustomerServiceImpl customerService = new CustomerServiceImpl(getCustomerHibernate());
+        //customerService.setCustomerHibernate(getCustomerHibernate());
 
         return customerService;
     }
